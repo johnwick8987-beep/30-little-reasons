@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #40343c;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(246, 214, 226, 0.8),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(214, 225, 216, 0.8),
+            transparent 32%
+        ),
+        #fffaf7;
+}
+
+
+/* Main welcome section */
+
+.welcome {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    animation: fadeIn 1.5s ease;
+}
+
+
+/* Small opening text */
+
+.welcome > p:first-child {
+    margin-bottom: 30px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #8f7480;
+}
+
+
+/* Main heading */
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(4rem, 15vw, 8rem);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    letter-spacing: -3px;
+
+    color: #332d36;
+}
+
+
+/* Make "reasons" violet */
+
+h1::first-line {
+    color: #332d36;
+}
+
+
+/* Paragraphs */
+
+.welcome > p:not(:first-child) {
+    margin-top: 40px;
+
+    font-size: clamp(1.15rem, 3vw, 1.45rem);
+
+    line-height: 1.7;
+
+    color: #655760;
+}
+
+.welcome > p:nth-of-type(3) {
+    margin-top: 12px;
+
+    color: #927487;
+
+    font-style: italic;
+}
+
+
+/* Button */
+
+button {
+    margin-top: 42px;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(112, 91, 168, 0.35);
+
+    background: rgba(255, 255, 255, 0.55);
+
+    color: #66529b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+button:hover {
+    transform: translateY(-4px);
+
+    background: #66529b;
+
+    color: white;
+
+    box-shadow:
+        0 12px 35px rgba(102, 82, 155, 0.25);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .welcome {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+
+        letter-spacing: -2px;
+    }
+
+    .welcome > p:not(:first-child) {
+        font-size: 1.15rem;
+    }
+
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
