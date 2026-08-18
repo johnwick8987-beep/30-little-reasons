@@ -193,13 +193,12 @@ function nextReason() {
     currentReason++;
 
     if (currentReason >= reasons.length) {
-
         currentReason = reasons.length - 1;
-
         return;
-
     }
 
     showReason();
-
 }
+
+window.openReasons = openReasons;
+window.nextReason = nextReason;
