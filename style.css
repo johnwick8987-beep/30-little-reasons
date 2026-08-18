@@ -357,3 +357,22 @@ button:hover {
     }
 
 }
+/* Smooth reason transitions */
+
+.reason-changing {
+    animation: reasonFade 0.7s ease;
+}
+
+@keyframes reasonFade {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
