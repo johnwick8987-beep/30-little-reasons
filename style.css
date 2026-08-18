@@ -428,6 +428,56 @@ button:hover {
             transparent 35%
         ),
         #dfe2f1;
+    /* =========================
+   FINAL REASON
+========================= */
+
+#reasons.final-reason {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(91, 84, 168, 0.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(48, 68, 125, 0.45),
+            transparent 38%
+        ),
+        #171a35;
+
+    color: #f8f5ff;
+
+    transition:
+        background 1.5s ease,
+        color 1.5s ease;
+}
+
+#reasons.final-reason > p:first-child {
+    color: #b9b4d8;
+}
+
+#reasons.final-reason > p:nth-of-type(2) {
+    color: #aaa5c8;
+}
+
+#reasons.final-reason h2 {
+    color: #ffffff;
+
+    font-size: clamp(2.8rem, 9vw, 5rem);
+}
+
+#reasons.final-reason > p:nth-of-type(3) {
+    color: #e2dff0;
+}
+
+#reasons.final-reason button {
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #ffffff;
+}
 
     transition: background 1.2s ease;
 }
