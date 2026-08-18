@@ -193,3 +193,167 @@ button:hover {
     }
 
 }
+/* =========================
+   REASONS SCREEN
+========================= */
+
+#reasons {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(246, 214, 226, 0.65),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(214, 225, 216, 0.65),
+            transparent 32%
+        ),
+        #fffaf7;
+
+    animation: reasonAppear 0.9s ease;
+}
+
+
+#reasons > p:first-child {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    color: #9b8790;
+
+    margin-bottom: 30px;
+}
+
+
+#reasons > p:nth-of-type(2) {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #a48691;
+
+    margin-bottom: 20px;
+}
+
+
+#reasons h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 10vw, 5.5rem);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #8e536c;
+
+    margin: 0 0 30px;
+}
+
+
+#reasons > p:nth-of-type(3) {
+    max-width: 680px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+
+    line-height: 1.75;
+
+    color: #55464e;
+
+    margin: 0;
+}
+
+
+#reasons button {
+    margin-top: 45px;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    border: none;
+
+    background: #6d55a6;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(109, 85, 166, 0.22);
+
+    transition: 0.3s ease;
+}
+
+
+#reasons button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(109, 85, 166, 0.3);
+}
+
+
+@keyframes reasonAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #reasons {
+        padding: 35px 25px;
+    }
+
+    #reasons h2 {
+        font-size: 3.6rem;
+    }
+
+    #reasons > p:nth-of-type(3) {
+        font-size: 1.2rem;
+    }
+
+}
