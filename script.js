@@ -195,7 +195,6 @@ if (currentReason >= 20 && currentReason < 29) {
 
     document.querySelector("#reasons > p:nth-of-type(3)").textContent =
         reason.text;
-    const reasonSection = document.getElementById("reasons");
 
 reasonSection.classList.remove("reason-changing");
 
