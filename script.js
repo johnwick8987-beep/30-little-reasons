@@ -172,7 +172,11 @@ function showReason() {
     const reason = reasons[currentReason];
     const reasonSection = document.getElementById("reasons");
 
-reasonSection.classList.remove("deep-blue", "violet");
+reasonSection.classList.remove(
+    "deep-blue",
+    "violet",
+    "final-reason"
+);
 
 if (currentReason >= 10 && currentReason < 20) {
     reasonSection.classList.add("deep-blue");
@@ -182,6 +186,9 @@ if (currentReason >= 20 && currentReason < 29) {
     reasonSection.classList.add("violet");
 }
 
+if (currentReason === 29) {
+    reasonSection.classList.add("final-reason");
+}
     const number = String(currentReason + 1).padStart(2, "0");
 
     document.querySelector("#reasons > p:first-child").textContent =
