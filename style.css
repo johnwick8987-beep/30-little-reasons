@@ -393,3 +393,65 @@ button:hover {
         transform: translateY(0);
     }
 }
+/* =========================
+   COLOR JOURNEY
+========================= */
+
+#reasons.deep-blue {
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(103, 117, 177, 0.25),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(119, 91, 175, 0.25),
+            transparent 32%
+        ),
+        #eef0f8;
+
+    transition: background 1.2s ease;
+}
+
+
+#reasons.violet {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(103, 86, 169, 0.35),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(56, 78, 137, 0.3),
+            transparent 35%
+        ),
+        #dfe2f1;
+
+    transition: background 1.2s ease;
+}
+
+
+#reasons.deep-blue h2 {
+    color: #465584;
+    transition: color 1.2s ease;
+}
+
+
+#reasons.violet h2 {
+    color: #6955a0;
+    transition: color 1.2s ease;
+}
+
+
+#reasons.deep-blue > p {
+    color: #59627b;
+    transition: color 1.2s ease;
+}
+
+
+#reasons.violet > p {
+    color: #5c5672;
+    transition: color 1.2s ease;
+}
