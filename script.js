@@ -1,3 +1,4 @@
 function openReasons() {
-    alert("Okay... let's begin ❤️");
+    document.querySelector(".welcome").style.display = "none";
+    document.getElementById("reasons").style.display = "flex";
 }
