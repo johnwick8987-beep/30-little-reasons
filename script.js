@@ -235,3 +235,42 @@ function nextReason() {
 
 window.openReasons = openReasons;
 window.nextReason = nextReason;
+
+function revealFinal() {
+
+    const reasonSection = document.getElementById("reasons");
+
+    reasonSection.innerHTML = `
+        <div class="final-message">
+
+            <p class="final-small">just one last thing...</p>
+
+            <h2>I don't know what happens next.</h2>
+
+            <p>
+                And I'm not asking you for anything.
+            </p>
+
+            <p>
+                I just wanted you to know that somewhere along the way,
+                you became someone I genuinely admire.
+            </p>
+
+            <p>
+                And I'm really glad I noticed you.
+            </p>
+
+            <span class="final-heart">♡</span>
+
+        </div>
+    `;
+
+    reasonSection.classList.remove(
+        "deep-blue",
+        "violet",
+        "final-reason",
+        "reason-changing"
+    );
+
+    reasonSection.classList.add("ultimate-ending");
+}
