@@ -202,6 +202,15 @@ if (currentReason === 29) {
 
     document.querySelector("#reasons > p:nth-of-type(3)").textContent =
         reason.text;
+    const nextButton = document.querySelector("#reasons button");
+
+if (currentReason === 29) {
+    nextButton.textContent = "there's one more thing... →";
+    nextButton.onclick = revealFinal;
+} else {
+    nextButton.textContent = "next →";
+    nextButton.onclick = nextReason;
+}
 
 reasonSection.classList.remove("reason-changing");
 
