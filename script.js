@@ -231,8 +231,7 @@ function nextReason() {
     }
 
     showReason();
-
-    addStar();
+    
 }
 
 window.openReasons = openReasons;
