@@ -277,8 +277,11 @@ function revealFinal() {
 
     const starField = document.getElementById("starField");
 
-    const star = document.createElement("div");
+    if (!starField) {
+        return;
+    }
 
+    const star = document.createElement("div");
     star.classList.add("star");
 
     const x = Math.random() * 90 + 5;
