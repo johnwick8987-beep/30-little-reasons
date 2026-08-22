@@ -191,8 +191,8 @@ if (currentReason === 29) {
 }
     const number = String(currentReason + 1).padStart(2, "0");
 
-    document.querySelector("#reasons > p:first-child").textContent =
-        number + " / 30";
+    document.querySelector("#reasons > p:nth-of-type(1)").textContent =
+    number + " / 30";
 
     document.querySelector("#reasons > p:nth-of-type(2)").textContent =
         "A little thing I noticed about you...";
