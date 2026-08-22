@@ -271,6 +271,22 @@ function revealFinal() {
         "final-reason",
         "reason-changing"
     );
+    function addStar() {
+
+    const starField = document.getElementById("starField");
+
+    const star = document.createElement("div");
+
+    star.classList.add("star");
+
+    const x = Math.random() * 90 + 5;
+    const y = Math.random() * 80 + 10;
+
+    star.style.left = x + "%";
+    star.style.top = y + "%";
+
+    starField.appendChild(star);
+    }
 
     reasonSection.classList.add("ultimate-ending");
 }
