@@ -226,8 +226,100 @@ reasonSection.classList.add("reason-changing");
 
 }
 
+function showMilestone(message, nextIndex) {
+
+    const existing = document.querySelector(".milestone-screen");
+
+    if (existing) {
+        existing.remove();
+    }
+
+    const milestone = document.createElement("div");
+
+    milestone.className = "milestone-screen";
+
+    milestone.innerHTML = `
+        <div class="milestone-inner">
+
+            <p class="milestone-small">
+                ${message.small}
+            </p>
+
+            <h2>
+                ${message.title}
+            </h2>
+
+            <p class="milestone-text">
+                ${message.text}
+            </p>
+
+            <button class="milestone-button">
+                ${message.button}
+            </button>
+
+        </div>
+    `;
+
+    document.body.appendChild(milestone);
+
+    requestAnimationFrame(() => {
+        milestone.classList.add("show");
+    });
+
+    milestone.querySelector(".milestone-button").onclick = () => {
+
+        milestone.classList.remove("show");
+
+        setTimeout(() => {
+
+            milestone.remove();
+
+            currentReason = nextIndex;
+
+            showReason();
+
+        }, 500);
+    };
+}
 
 function nextReason() {
+
+    const milestoneMessages = {
+        9: {
+            small: "ten already...",
+            title: "And somehow, there are still more.",
+            text: "I hope you've been smiling along the way.",
+            button: "keep going →"
+        },
+
+        19: {
+            small: "halfway already...",
+            title: "You're still here.",
+            text: "And I still have ten more little things I want you to know.",
+            button: "continue →"
+        },
+
+        24: {
+            small: "okay... one little pause.",
+            title: "We're getting to the ones that are harder to explain.",
+            text: "Some things are easier to feel than they are to put into words.",
+            button: "keep going →"
+        },
+
+        28: {
+            small: "almost there...",
+            title: "One last reason.",
+            text: "And this one is a little different.",
+            button: "show me →"
+        }
+    };
+
+    const currentIndex = currentReason;
+
+    if (milestoneMessages[currentIndex]) {
+        showMilestone(milestoneMessages[currentIndex], currentIndex + 1);
+        return;
+    }
 
     currentReason++;
 
@@ -237,9 +329,7 @@ function nextReason() {
     }
 
     showReason();
-    
 }
-
 window.openReasons = openReasons;
 window.nextReason = nextReason;
 
