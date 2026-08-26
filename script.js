@@ -268,18 +268,12 @@ function showMilestone(message, nextIndex) {
 
     milestone.querySelector(".milestone-button").onclick = () => {
 
-        milestone.classList.remove("show");
+    milestone.remove();
 
-        setTimeout(() => {
+    currentReason = nextIndex;
 
-            milestone.remove();
-
-            currentReason = nextIndex;
-
-            showReason();
-
-        }, 500);
-    };
+    showReason();
+};
 }
 
 function nextReason() {
