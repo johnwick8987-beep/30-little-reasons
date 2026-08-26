@@ -284,29 +284,36 @@ function showMilestone(message, nextIndex) {
 
 function nextReason() {
 
+    currentReason++;
+
+    if (currentReason >= reasons.length) {
+        currentReason = reasons.length - 1;
+        return;
+    }
+
     const milestoneMessages = {
-        9: {
+        10: {
             small: "ten already...",
             title: "And somehow, there are still more.",
             text: "I hope you've been smiling along the way.",
             button: "keep going →"
         },
 
-        19: {
+        20: {
             small: "halfway already...",
             title: "You're still here.",
             text: "And I still have ten more little things I want you to know.",
             button: "continue →"
         },
 
-        24: {
+        25: {
             small: "okay... one little pause.",
             title: "We're getting to the ones that are harder to explain.",
             text: "Some things are easier to feel than they are to put into words.",
             button: "keep going →"
         },
 
-        28: {
+        29: {
             small: "almost there...",
             title: "One last reason.",
             text: "And this one is a little different.",
@@ -314,17 +321,13 @@ function nextReason() {
         }
     };
 
-    const currentIndex = currentReason;
+    if (milestoneMessages[currentReason]) {
 
-    if (milestoneMessages[currentIndex]) {
-        showMilestone(milestoneMessages[currentIndex], currentIndex + 1);
-        return;
-    }
+        showMilestone(
+            milestoneMessages[currentReason],
+            currentReason
+        );
 
-    currentReason++;
-
-    if (currentReason >= reasons.length) {
-        currentReason = reasons.length - 1;
         return;
     }
 
