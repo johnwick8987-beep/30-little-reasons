@@ -596,58 +596,36 @@ button:hover {
 
 }
 /* =========================
-   STAR FIELD
+   PROGRESS BAR
 ========================= */
 
-.star-field {
+.progress-track {
     position: absolute;
 
-    inset: 0;
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(240px, 55vw);
+    height: 2px;
+
+    background: rgba(120, 100, 120, 0.15);
+
+    border-radius: 10px;
 
     overflow: hidden;
 
-    pointer-events: none;
-
-    z-index: 0;
+    z-index: 5;
 }
 
-#reasons > p,
-#reasons > h2,
-#reasons > button {
-    position: relative;
+.progress-bar {
+    width: 3.33%;
+    height: 100%;
 
-    z-index: 2;
-}
+    background: #8e6ca8;
 
-.star {
-    position: absolute;
+    border-radius: 10px;
 
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-
-    background: white;
-
-    box-shadow:
-        0 0 8px rgba(190, 185, 255, 0.9),
-        0 0 16px rgba(120, 110, 220, 0.5);
-
-    opacity: 0;
-
-    animation: starAppear 1.2s ease forwards;
-}
-
-@keyframes starAppear {
-
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    to {
-        opacity: 0.9;
-        transform: scale(1);
-    }
-
+    transition: width 0.7s ease;
 }
