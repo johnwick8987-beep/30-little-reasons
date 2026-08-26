@@ -194,6 +194,12 @@ if (currentReason === 29) {
     document.querySelector("#reasons > p:nth-of-type(1)").textContent =
     number + " / 30";
 
+    const progressBar = document.getElementById("progressBar");
+
+if (progressBar) {
+    progressBar.style.width = ((currentReason + 1) / 30 * 100) + "%";
+}
+
     document.querySelector("#reasons > p:nth-of-type(2)").textContent =
         "A little thing I noticed about you...";
 
