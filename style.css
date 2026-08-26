@@ -600,15 +600,12 @@ button:hover {
 ========================= */
 
 .progress-track {
-    position: absolute;
+    position: relative;
 
-    top: 25px;
-    left: 50%;
+    width: 75%;
+    height: 3px;
 
-    transform: translateX(-50%);
-
-    width: min(320px, 75vw);
-    height: 2px;
+    margin: 25px auto 0;
 
     background: rgba(120, 100, 120, 0.15);
 
